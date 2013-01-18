@@ -1,0 +1,13 @@
+# VIM Swap files
+.*.swp
+# MacOS Metadata
+.DS_Store*
+
+# Isniff files
+.errfiles
+.newerrs
+.olderrs
+
+#push tempfiles
+.thefiles
+.thefiles.bak

@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#CURBRANCH=`git name-rev --name-only HEAD`
+CURBRANCH=`git rev-parse --abbrev-ref HEAD`
+
+function updatebranch {
+	if [ `git rev-parse $2` != `git rev-parse $1` ]; then
+		echo --- Rebasing $2 onto $1
+		git rebase $1 $2
+	else
+		echo --- $2 is up to date with $1
+	fi
+}
+
+if $(git rev-parse --is-inside-work-tree 2>/dev/null); then
+	if git diff-index --exit-code HEAD; then 
+		echo --- Fetching SVN changes
+		git svn fetch
+		updatebranch trunk master &&
+		updatebranch 5.3.x 53x &&
+		updatebranch 5.4.x 54x &&
+		updatebranch 5.5.x 55x &&
+		updatebranch 5.7.x 57x &&
+		updatebranch master table_wrapper &&
+		git checkout $CURBRANCH
+		echo all done
+		
+	else 
+		echo XXX --- Your working dir is not clean!
+	fi
+else
+	echo XXX --- outside of a working tree!
+fi

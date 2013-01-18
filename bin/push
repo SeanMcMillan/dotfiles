@@ -1,0 +1,35 @@
+#!/bin/bash
+
+
+
+if [ "$1" = "" ] || [ "$2" = "" ]; then
+	if [ "$1" = "" ] && [ "$2" = "" ]; then
+		SERVER=10.10.1.148
+		FROMFILES=''
+	else
+		echo usage: push range server
+		exit
+	fi
+else
+	SERVER="$2"
+	FROMFILES="--files-from=.thefiles"
+	git diff-tree $1 --name-only -r --exit-code www > .thefiles
+	if  [ "$?" -le 0 ]; then
+		echo bad range
+		exit
+	fi
+	sed -i .bak -e 's/^www.//' .thefiles 
+
+fi
+
+
+
+echo pushing to server
+
+#DRYRUN=--dry-run
+#DELETE='--delete --delete-excluded'
+
+# leave a training slash on the source dir
+/usr/bin/rsync $DRYRUN --rsh=ssh --verbose --checksum --perms --ignore-times --recursive --progress --cvs-exclude --exclude=.DS_Store --exclude=.FBCLockFolder --exclude=.svn --exclude='.*.swp' $DELETE $FROMFILES ~/Documents/Development/montage/www/ $SERVER:/usr/local/www/data
+
+echo done

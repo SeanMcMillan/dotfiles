@@ -1,0 +1,11 @@
+[user]
+	email = reaper@umich.edu
+[color]
+	diff = always
+	grep = auto
+	ui = auto
+[core]
+	excludesfile = /Users/smcmillan/.gitignore_global
+	pager = less --quit-if-one-screen --ignore-case --LONG-PROMPT --quiet 
+[log]
+	date = local

@@ -1,0 +1,10 @@
+SRCDIR=/Users/smcmillan/Documents/Development/montage
+WWWDIR=$SRCDIR/www
+
+phpcs --extensions=php --report=csv "$WWWDIR" | awk -F, '{print $1, $3, $4, $5;}' > "$SRCDIR/.newerrs"
+
+rm "$SRCDIR/.errfiles"
+diff -c "$SRCDIR/.olderrs" "$SRCDIR/.newerrs" | grep ^+ | awk '{print $2}' | uniq > "$SRCDIR/.errfiles"
+
+xargs phpcs < "$SRCDIR/.errfiles"
+
