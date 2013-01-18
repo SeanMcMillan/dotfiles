@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/smcmillan/Documents'
+let g:netrw_dirhist_2='/Users/smcmillan/Documents/Development/browserbugs'
+let g:netrw_dirhist_3='/Users/smcmillan/.vim'
