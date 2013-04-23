@@ -1,0 +1,23 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use File::Spec;
+use File::Basename;
+
+my ($source, $dest) = @ARGV;
+
+if ( -d $dest ) {
+    print "$dest exists; using basname. ";
+    my $basename = basename($source);
+    $dest = File::Spec->catfile($dest, $basename);
+    print "New path is now: $dest\n";
+}
+
+print "Linking $source to $dest\n";
+
+if (link($source, $dest)) {
+    exit 0;
+} else {
+    die "Something went wrong while linking: $@, $^E";
+}
+
