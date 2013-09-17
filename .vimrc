@@ -26,8 +26,8 @@ if has("gui_running")
 endif
 
 " Set search path to everything under montage
-"set path=~/Documents/Programming/Chaney/aculink-web/**
-"cd ~/Documents/Programming/Chaney/aculink-web " cd there too.
+set path=~/Documents/Programming/Chaney/aculink-web/**
+cd ~/Documents/Programming/Chaney/aculink-web " cd there too.
 
 set hlsearch " highlight searches
 set incsearch " search incrementally
@@ -60,7 +60,7 @@ set statusline=%y " file type
 set statusline+=%F " Full path
 set statusline+=%m " modified mark
 set statusline+=%r " Read-only mark
-"set statusline+=%{SyntasticStatuslineFlag()} " Syntax check mark
+set statusline+=%{SyntasticStatuslineFlag()} " Syntax check mark
 set statusline+=%= " right align
 set statusline+=[%n] " buffer number
 set statusline+=%2(\ %) " 2 spaces
@@ -93,7 +93,7 @@ let g:ctrlp_working_path_mode = 0
 " Switch buffer if it's already open
 let g:ctrlp_switch_buffer = 2
 " ignore source control directories
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|node_modules$\|vendor$\|public$'
 
 " Setup Syntax checking
 " Set status bar to show errors and warnings
