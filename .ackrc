@@ -1,3 +1,6 @@
+--type-set
+wiki=.wiki
+--type-set
+coffee=.coffee
 --smart-case
 --follow
-

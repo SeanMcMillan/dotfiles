@@ -1,6 +1,11 @@
 " This is my .vimrc. There are many like it, but this one is mine.
 
 set nocompatible " compatible means all options are global, becasue vi only had one buffer. lame.
+
+" load pathogen plugin, which allows us to leep our plugins unmixed.
+" vim plugins will be loaded from any subdir of ~/.vim/bundle
+call pathogen#infect()
+
 syntax on " syntax highlighting (and filetype detection)
 
 filetype indent on      " activates indenting for files
@@ -21,8 +26,8 @@ if has("gui_running")
 endif
 
 " Set search path to everything under montage
-set path=~/Documents/Development/montage/**
-cd ~/Documents/Development/montage " cd there too.
+"set path=~/Documents/Programming/Chaney/aculink-web/**
+"cd ~/Documents/Programming/Chaney/aculink-web " cd there too.
 
 set hlsearch " highlight searches
 set incsearch " search incrementally
@@ -49,12 +54,13 @@ set history=1000 " remember many commands
 
 set laststatus=2 " show the status line
 
+
 " status line from stconfig, tweaked
 set statusline=%y " file type
 set statusline+=%F " Full path
 set statusline+=%m " modified mark
 set statusline+=%r " Read-only mark
-set statusline+=%{SyntasticStatuslineFlag()} " Syntax check mark
+"set statusline+=%{SyntasticStatuslineFlag()} " Syntax check mark
 set statusline+=%= " right align
 set statusline+=[%n] " buffer number
 set statusline+=%2(\ %) " 2 spaces
@@ -66,14 +72,10 @@ set statusline+=%% " a percent sign
 
 set colorcolumn=100 " Draw a bar at column 100 to show when your lines are too long
 
-" load pathogen plugin, which allows us to leep our plugins unmixed.
-" vim plugins will be loaded from any subdir of ~/.vim/bundle
-call pathogen#infect()
-
 "set autowrite " write out filles on buffer switch
 set hidden " allow switching from edited buffers
 
-set tags=~/.vim/tags/montage " tags file for this project
+"set tags=~/.vim/tags/montage " tags file for this project
 
 " syntax check a php file
 " map \1 :!php -l %<CR>
@@ -102,3 +104,6 @@ set background=light
 colorscheme solarized
 
 set foldmethod=syntax " Fold based on syntax, not markers
+
+autocmd FileType coffee :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
+autocmd FileType ruby :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
