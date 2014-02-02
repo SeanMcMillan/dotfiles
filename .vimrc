@@ -110,7 +110,11 @@ set foldmethod=syntax " Fold based on syntax, not markers
 " Spindance file layout.
 autocmd FileType coffee :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
 autocmd FileType jade :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
+autocmd FileType scss :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
 autocmd FileType ruby :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
 
 " Keep swap files in home, because of editing on flakey SMB shares
 set directory=~/.vimswp
+
+" Split by default
+vsplit
