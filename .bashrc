@@ -5,6 +5,8 @@ export PATH=~/bin:/usr/local/pear/bin:$PATH
 
 export PHPRC=~/.phpini
 
+export EDITOR=/usr/bin/vim
+
 alias gst='git status'
 alias glo='git log --graph --oneline --branches --remotes --tags --decorate'
 alias gciam='git commit -am'

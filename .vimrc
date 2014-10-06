@@ -1,5 +1,7 @@
 " This is my .vimrc. There are many like it, but this one is mine.
 
+set shell=/bin/sh " fish breaks some vim plugins
+
 set nocompatible " compatible means all options are global, becasue vi only had one buffer. lame.
 
 " load pathogen plugin, which allows us to leep our plugins unmixed.
@@ -26,10 +28,8 @@ if has("gui_running")
 endif
 
 " Set search path to everything under current project
-"set path=~/Documents/Programming/Chaney/aculink-web/**
-set path=/Volumes/dev/web/**
-"cd ~/Documents/Programming/Chaney/aculink-web " cd there too.
-cd /Volumes/dev/web
+set path=~/Documents/Projects/**
+cd ~/Documents/Projects
 
 set hlsearch " highlight searches
 set incsearch " search incrementally
