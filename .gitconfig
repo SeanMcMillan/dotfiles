@@ -9,3 +9,9 @@
 	pager = less --quit-if-one-screen --ignore-case --LONG-PROMPT --quiet 
 [log]
 	date = local
+[alias]
+	tree = log --decorate --oneline --all --graph
+	newsvn = log -p --reverse --ignore-all-space --patience master..git-svn
+	newgit = log -p --reverse --ignore-all-space --patience master..origin/master
+[push]
+	default = simple

@@ -11,3 +11,7 @@
 #push tempfiles
 .thefiles
 .thefiles.bak
+
+#Other
+node_modules
+.sass-cache

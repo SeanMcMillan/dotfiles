@@ -4,3 +4,4 @@ wiki=.wiki
 coffee=.coffee
 --smart-case
 --follow
+--ignore-dir=dist

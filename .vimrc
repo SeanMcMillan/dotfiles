@@ -1,4 +1,5 @@
 " This is my .vimrc. There are many like it, but this one is mine.
+" reload with :so %
 
 set shell=/bin/sh " fish breaks some vim plugins
 
@@ -13,19 +14,17 @@ syntax on " syntax highlighting (and filetype detection)
 filetype indent on      " activates indenting for files
 set autoindent          " auto indenting
 
+" Tab Heresy
 set tabstop=4 " tabs are four columns wide
 set shiftwidth=4 " indent command shifts four columns
 set noexpandtab " we use chr(9) for indentation here
 set softtabstop=0 " don't use soft tab stops
 
-
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set lines=51 columns=161
-  set guioptions -=T
-  set guifont=Ubuntu\ Mono:h14
-endif
+" Indent Orthodoxy
+" set tabstop=100 " tabs are HUGE so you don't make them
+" set shiftwidth=4 " indent command shifts four columns
+" set expandtab " Use spaces
+" set softtabstop=4 " insert 4 spaces when tabbing
 
 " Set search path to everything under current project
 set path=~/Documents/Projects/**
@@ -95,11 +94,17 @@ let g:ctrlp_working_path_mode = 0
 " Switch buffer if it's already open
 let g:ctrlp_switch_buffer = 2
 " ignore source control directories
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|node_modules$\|vendor$\|public$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|node_modules$\|vendor$\|public$\|dist$'
 
 " Setup Syntax checking
 " Set status bar to show errors and warnings
 let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}; First on line %F]'
+" Always polulate error list
+let g:syntastic_always_populate_loc_list = 1
+" Let custom attributes pass
+let g:syntastic_html_tidy_ignore_errors = [ 'proprietary attribute' ]
+" Set jshint for my javascript checker.
+let g:syntastic_javascript_checkers = ['jshint']
 
 " Solarized color
 set background=light
@@ -108,13 +113,24 @@ colorscheme solarized
 set foldmethod=syntax " Fold based on syntax, not markers
 
 " Spindance file layout.
-autocmd FileType coffee :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
-autocmd FileType jade :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
-autocmd FileType scss :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
-autocmd FileType ruby :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
+" autocmd FileType coffee :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
+" autocmd FileType jade :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
+" autocmd FileType scss :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
+" autocmd FileType ruby :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
 
 " Keep swap files in home, because of editing on flakey SMB shares
-set directory=~/.vimswp
+set directory=~/.vimswp,.
+set backupdir=~/.vimswp,.
 
-" Split by default
-vsplit
+" gf for node needs this
+set suffixesadd+=.js
+
+if has("gui_running")
+	" GUI is running or is about to start.
+	" Maximize gvim window.
+	set lines=51 columns=161
+	set guioptions -=T
+	set guifont=Ubuntu\ Mono:h14
+	" Split the window
+	vsplit
+endif
