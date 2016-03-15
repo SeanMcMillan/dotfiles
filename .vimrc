@@ -122,6 +122,10 @@ set foldmethod=syntax " Fold based on syntax, not markers
 set directory=~/.vimswp,.
 set backupdir=~/.vimswp,.
 
+" Nerdtree on F3
+"
+map <F3> :NERDTreeToggle<CR>
+
 " gf for node needs this
 set suffixesadd+=.js
 
