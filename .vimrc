@@ -94,7 +94,7 @@ let g:ctrlp_working_path_mode = 0
 " Switch buffer if it's already open
 let g:ctrlp_switch_buffer = 2
 " ignore source control directories
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|node_modules$\|vendor$\|public$\|dist$'
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|node_modules$\|vendor$\|public$\|dist\|target$'
 
 " Setup Syntax checking
 " Set status bar to show errors and warnings
@@ -128,6 +128,7 @@ map <F3> :NERDTreeToggle<CR>
 
 " gf for node needs this
 set suffixesadd+=.js
+set suffixesadd+=.less
 
 if has("gui_running")
 	" GUI is running or is about to start.
