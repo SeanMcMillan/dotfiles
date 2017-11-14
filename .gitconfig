@@ -1,11 +1,12 @@
 [user]
 	email = reaper@umich.edu
+	name = Sean McMillan
 [color]
 	diff = always
 	grep = auto
 	ui = auto
 [core]
-	excludesfile = /Users/smcmillan/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	pager = less --quit-if-one-screen --ignore-case --LONG-PROMPT --quiet 
 [log]
 	date = local
@@ -15,3 +16,10 @@
 	newgit = log -p --reverse --ignore-all-space --patience master..origin/master
 [push]
 	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[winUpdater]
+	recentlySeenVersion = 2.15.0.windows.1

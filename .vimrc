@@ -137,5 +137,5 @@ if has("gui_running")
 	set guioptions -=T
 	set guifont=Ubuntu\ Mono:h14
 	" Split the window
-	vsplit
+	"vsplit
 endif

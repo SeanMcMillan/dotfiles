@@ -15,3 +15,9 @@
 #Other
 node_modules
 .sass-cache
+
+# .NET Projects
+bin
+obj
+*.suo
+.vs
