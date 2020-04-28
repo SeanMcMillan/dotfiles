@@ -15,9 +15,14 @@
 #Other
 node_modules
 .sass-cache
+.rpt2_cache
 
 # .NET Projects
 bin
 obj
 *.suo
 .vs
+
+# Java Projects
+target
+.idea

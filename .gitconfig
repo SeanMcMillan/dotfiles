@@ -22,4 +22,4 @@
 	process = git-lfs filter-process
 	required = true
 [winUpdater]
-	recentlySeenVersion = 2.15.0.windows.1
+	recentlySeenVersion = 2.20.1.windows.1

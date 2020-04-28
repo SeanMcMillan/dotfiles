@@ -27,8 +27,8 @@ set softtabstop=0 " don't use soft tab stops
 " set softtabstop=4 " insert 4 spaces when tabbing
 
 " Set search path to everything under current project
-set path=~/Documents/Projects/**
-cd ~/Documents/Projects
+set path=/DevSpace/Projects/**
+cd /DevSpace/Projects
 
 set hlsearch " highlight searches
 set incsearch " search incrementally
@@ -135,7 +135,8 @@ if has("gui_running")
 	" Maximize gvim window.
 	set lines=51 columns=161
 	set guioptions -=T
-	set guifont=Ubuntu\ Mono:h14
+	set guifont=InputMono:h10
+	"set guifont=Ubuntu\ Mono:h14
 	" Split the window
 	"vsplit
 endif
