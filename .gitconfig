@@ -14,6 +14,9 @@
 	tree = log --decorate --oneline --all --graph
 	newsvn = log -p --reverse --ignore-all-space --patience master..git-svn
 	newgit = log -p --reverse --ignore-all-space --patience master..origin/master
+	ff = merge --ff-only
+    noff = merge --no-ff
+    fa = fetch --all
 [push]
 	default = simple
 [filter "lfs"]
@@ -22,4 +25,4 @@
 	process = git-lfs filter-process
 	required = true
 [winUpdater]
-	recentlySeenVersion = 2.20.1.windows.1
+	recentlySeenVersion = 2.25.0.windows.1
