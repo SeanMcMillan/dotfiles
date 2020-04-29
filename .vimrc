@@ -27,8 +27,8 @@ set softtabstop=0 " don't use soft tab stops
 " set softtabstop=4 " insert 4 spaces when tabbing
 
 " Set search path to everything under current project
-set path=/DevSpace/Projects/**
-cd /DevSpace/Projects
+set path=~/Documents/Projects/**
+cd ~/Documents/Projects
 
 set hlsearch " highlight searches
 set incsearch " search incrementally
@@ -137,6 +137,6 @@ if has("gui_running")
 	set guioptions -=T
 	set guifont=InputMono:h10
 	"set guifont=Ubuntu\ Mono:h14
-	" Split the window
-	"vsplit
+	" Split the window, but only after it's shown.
+	au VimEnter * vsplit
 endif
