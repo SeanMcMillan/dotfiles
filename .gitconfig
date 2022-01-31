@@ -8,6 +8,10 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = less --quit-if-one-screen --ignore-case --LONG-PROMPT --quiet 
+	eol = lf
+	safecrlf = true
+	autocrlf = input
+	editor = vim
 [log]
 	date = local
 [alias]
@@ -17,12 +21,16 @@
 	ff = merge --ff-only
     noff = merge --no-ff
     fa = fetch --all
+	ffm = fetch . origin/master:master
+	ffr = fetch . origin/release:release
 [push]
-	default = simple
+	default = current
+[winUpdater]
+	recentlySeenVersion = 2.25.0.windows.1
 [filter "lfs"]
-	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[winUpdater]
-	recentlySeenVersion = 2.25.0.windows.1
+	clean = git-lfs clean -- %f
+[gui]
+	recentrepo = C:/Users/User/Documents/Projects/renascare-wordpress/rpl

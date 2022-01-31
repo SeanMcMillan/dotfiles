@@ -107,8 +107,10 @@ let g:syntastic_html_tidy_ignore_errors = [ 'proprietary attribute' ]
 let g:syntastic_javascript_checkers = ['jshint']
 
 " Solarized color
-set background=light
-colorscheme solarized
+if !has("win32unix")
+	set background=light
+	colorscheme solarized
+endif
 
 set foldmethod=syntax " Fold based on syntax, not markers
 
