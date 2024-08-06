@@ -1,8 +1,10 @@
 #!/bin/sh
 
-ln -s ~/.bashrc .bashrc
-ln -s ~/.gitconfig .gitconfig
-ln -s ~/.gitignore_global .gitignore_global
-ln -s ~/.profile .profile
-ln -s ~/.vim .vim
-ln -s ~/.vimrc .vimrc
+ln -s `pwd`/.bashrc ~/.bashrc
+ln -s `pwd`/.gitconfig ~/.gitconfig
+ln -s `pwd`/.gitignore_global  ~/.gitignore_global
+ln -s `pwd`/.profile ~/.profile
+ln -s `pwd`/.vim ~/.vim 
+ln -s `pwd`/.vimrc ~/.vimrc
+
+ln -s `pwd`/bin ~/bin

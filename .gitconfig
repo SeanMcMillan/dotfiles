@@ -34,3 +34,5 @@
 	clean = git-lfs clean -- %f
 [gui]
 	recentrepo = C:/Users/Sean/Documents/Projects/potbelly-web-app
+[credential]
+	helper = store
