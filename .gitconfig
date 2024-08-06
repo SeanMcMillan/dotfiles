@@ -21,7 +21,7 @@
 	ff = merge --ff-only
     noff = merge --no-ff
     fa = fetch --all
-	ffm = fetch . origin/master:master
+	ffm = fetch . origin/main:main
 	ffr = fetch . origin/release:release
 [push]
 	default = current
@@ -33,4 +33,4 @@
 	required = true
 	clean = git-lfs clean -- %f
 [gui]
-	recentrepo = C:/Users/User/Documents/Projects/renascare-wordpress/rpl
+	recentrepo = C:/Users/Sean/Documents/Projects/potbelly-web-app

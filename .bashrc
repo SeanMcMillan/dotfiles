@@ -1,7 +1,7 @@
 #source /etc/bashrc
 #source /usr/local/etc/profile.d/colorsvn-env.sh
 
-export PATH=~/bin:/usr/local/pear/bin:$PATH
+export PATH=./vendor/bin:./node_modules/bin:~/bin:/usr/local/pear/bin:$PATH
 
 export PHPRC=~/.phpini
 
