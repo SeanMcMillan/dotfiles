@@ -7,10 +7,7 @@ export PHPRC=~/.phpini
 
 export EDITOR=/usr/bin/vim
 
-alias gst='git status'
-alias glo='git log --graph --oneline --branches --remotes --tags --decorate'
-alias gciam='git commit -am'
-alias gdw='git diff -w'
+source $HOME/.aliases
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -33,22 +30,8 @@ fi
 source ~/bin/git-prompt.sh
 source /usr/share/bash-completion/completions/git
 
-alias sniff='find /Users/smcmillan/Documents/Development/montage/www -name '*.php' -exec phpcs \{} \;'
-alias cdmo='cd /Users/smcmillan/Documents/Development/montage/'
-alias review='git log --since=yesterday -p --reverse --patience --ignore-all-space'
-alias review-week='git log --since="last friday" -p --reverse --patience --ignore-all-space'
-
-if [ -d "/c/Users/Sean/Documents/Projects/" ] ; then
-    alias cdpr='cd /c/Users/Sean/Documents/Projects/'
-fi
-
-if [ -d "$HOME/projects" ] ; then
-    alias cdpr='cd $HOME/projects/'
-fi
-
-alias cd..='cd ..'
-
 # NVM setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
