@@ -31,7 +31,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 source ~/bin/git-prompt.sh
-
+source /usr/share/bash-completion/completions/git
 
 alias sniff='find /Users/smcmillan/Documents/Development/montage/www -name '*.php' -exec phpcs \{} \;'
 alias cdmo='cd /Users/smcmillan/Documents/Development/montage/'

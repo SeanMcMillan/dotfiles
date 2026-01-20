@@ -27,8 +27,8 @@ set softtabstop=0 " don't use soft tab stops
 " set softtabstop=4 " insert 4 spaces when tabbing
 
 " Set search path to everything under current project
-set path=~/Documents/Projects/**
-cd ~/Documents/Projects
+set path=~/Documents/projects/**
+cd ~/Documents/projects
 
 set hlsearch " highlight searches
 set incsearch " search incrementally
