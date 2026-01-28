@@ -1,0 +1,28 @@
+
+# Git shortcuts
+alias gst='git status'
+alias glo='git log --graph --oneline --branches --remotes --tags --decorate'
+alias gciam='git commit -am'
+alias gdw='git diff -w'
+
+# Shortcuts from montage
+# alias sniff='find /Users/smcmillan/Documents/Development/montage/www -name '*.php' -exec phpcs \{} \;'
+# alias cdmo='cd /Users/smcmillan/Documents/Development/montage/'
+# alias review='git log --since=yesterday -p --reverse --patience --ignore-all-space'
+# alias review-week='git log --since="last friday" -p --reverse --patience --ignore-all-space'
+
+
+if [ -d "/c/Users/Sean/Documents/Projects/" ] ; then
+    alias cdpr='cd /c/Users/Sean/Documents/Projects/'
+fi
+
+if [ -d "$HOME/Documents/projects" ] ; then
+    alias cdpr='cd $HOME/Documents/projects/'
+fi
+
+alias cd..='cd ..'
+
+# color grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
