@@ -36,3 +36,5 @@
 	recentrepo = C:/Users/Sean/Documents/Projects/potbelly-web-app
 [credential]
 	helper = store
+[fetch]
+	prune = true

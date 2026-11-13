@@ -18,6 +18,9 @@ fi
 
 if [ -d "$HOME/Documents/projects" ] ; then
     alias cdpr='cd $HOME/Documents/projects/'
+    alias cdfe='cd $HOME/Documents/projects/obm-rts-frontend'
+    alias cdbe='cd $HOME/Documents/projects/obm-rts-api'
+    alias cddx='cd $HOME/Documents/projects/obm-rts-api-docs'
 fi
 
 alias cd..='cd ..'
