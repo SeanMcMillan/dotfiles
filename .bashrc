@@ -22,4 +22,4 @@ else
     source ~/bin/git-prompt.sh
 fi
 
-# export MOZ_ENABLE_WAYLAND=0
+export MOZ_ENABLE_WAYLAND=0
