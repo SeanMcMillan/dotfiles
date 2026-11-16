@@ -1,0 +1,19 @@
+# Sourced by both .bashrc and .zshrc: keep it POSIX sh.
+
+# BSD ls (mac) reads CLICOLOR/LSCOLORS; GNU ls (linux) needs dircolors and --color
+export CLICOLOR=1
+export LSCOLORS=Gxfxcxdxbxegedabagacad
+if command -v dircolors >/dev/null; then
+    if [ -r ~/.dircolors ]; then eval "$(dircolors -b ~/.dircolors)"; else eval "$(dircolors -b)"; fi
+    alias ls='ls --color=auto'
+fi
+
+export EDITOR=vim
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -d "$HOME/.colima" ] && export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
+
+[ -f ~/.tokens ] && . ~/.tokens

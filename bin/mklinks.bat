@@ -5,6 +5,7 @@ set PROJECTS=%CD%
 popd
 
 mklink %USERPROFILE%\.bashrc %REPO%\.bashrc
+mklink %USERPROFILE%\.shellrc %REPO%\.shellrc
 mklink %USERPROFILE%\.aliases %REPO%\.aliases
 mklink %USERPROFILE%\.gitconfig %REPO%\.gitconfig
 mklink %USERPROFILE%\.gitignore_global %REPO%\.gitignore_global

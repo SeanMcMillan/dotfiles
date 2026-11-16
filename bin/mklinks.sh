@@ -5,6 +5,7 @@ projects=$(dirname "$repo")
 
 ln -sn "$repo/.bashrc" ~/.bashrc
 ln -sn "$repo/.zshrc" ~/.zshrc
+ln -sn "$repo/.shellrc" ~/.shellrc
 ln -sn "$repo/.aliases" ~/.aliases
 ln -sn "$repo/.gitconfig" ~/.gitconfig
 ln -sn "$repo/.gitignore_global" ~/.gitignore_global
