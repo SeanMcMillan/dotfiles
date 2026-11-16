@@ -1,18 +1,15 @@
 
-# zsh aoutocomplete
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# zsh autocomplete
 autoload -Uz compinit
 compinit
-zstyle ':completion:*' mwnu select
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
+zstyle ':completion:*' menu select
 
 source $HOME/.aliases
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # fancy git prompt
 eval "$(starship init zsh)"
@@ -45,3 +42,6 @@ SAVEHIST=100000
 setopt INC_APPEND_HISTORY   # write each command as it runs
 # or SHARE_HISTORY instead, if you also want live sharing between open shells
 setopt EXTENDED_HISTORY     # add timestamps
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

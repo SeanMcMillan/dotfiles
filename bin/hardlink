@@ -18,6 +18,6 @@ print "Linking $source to $dest\n";
 if (link($source, $dest)) {
     exit 0;
 } else {
-    die "Something went wrong while linking: $@, $^E";
+    die "Something went wrong while linking: $!, $^E";
 }
 

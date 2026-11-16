@@ -1,9 +1,9 @@
 #source /etc/bashrc
 #source /usr/local/etc/profile.d/colorsvn-env.sh
 
-export PATH=./vendor/bin:./node_modules/bin:~/bin:/usr/local/pear/bin:$PATH
+# export PATH=./vendor/bin:./node_modules/.bin:~/bin
 
-export PHPRC=~/.phpini
+# export PHPRC=~/.phpini
 
 export EDITOR=/usr/bin/vim
 
@@ -22,13 +22,13 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    # alias grep='grep --color=auto'
+    # alias fgrep='fgrep --color=auto'
+    # alias egrep='egrep --color=auto'
 fi
 
 source ~/bin/git-prompt.sh
-source /usr/share/bash-completion/completions/git
+[ -f /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
 
 # NVM setup
 export NVM_DIR="$HOME/.nvm"

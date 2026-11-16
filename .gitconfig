@@ -2,7 +2,7 @@
 	email = reaper@umich.edu
 	name = Sean McMillan
 [color]
-	diff = always
+	diff = auto
 	grep = auto
 	ui = auto
 [core]
@@ -19,22 +19,18 @@
 	newsvn = log -p --reverse --ignore-all-space --patience master..git-svn
 	newgit = log -p --reverse --ignore-all-space --patience master..origin/master
 	ff = merge --ff-only
-    noff = merge --no-ff
-    fa = fetch --all
+	noff = merge --no-ff
+	fa = fetch --all
 	ffm = fetch . origin/main:main
 	ffr = fetch . origin/release:release
 [push]
 	default = current
-[winUpdater]
-	recentlySeenVersion = 2.25.0.windows.1
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-[gui]
-	recentrepo = C:/Users/Sean/Documents/Projects/potbelly-web-app
 [credential]
-	helper = store
+	# helper = store
 [fetch]
 	prune = true

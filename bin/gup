@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #CURBRANCH=`git name-rev --name-only HEAD`
 CURBRANCH=`git rev-parse --abbrev-ref HEAD`

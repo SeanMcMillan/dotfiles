@@ -121,8 +121,8 @@ set foldmethod=syntax " Fold based on syntax, not markers
 " autocmd FileType ruby :setlocal shiftwidth=2 softtabstop=2 expandtab tabstop=100
 
 " Keep swap files in home, because of editing on flakey SMB shares
-set directory=~/.vimswp,.
-set backupdir=~/.vimswp,.
+" set directory=~/.vimswp,.
+" set backupdir=~/.vimswp,.
 
 " Nerdtree on F3
 "
