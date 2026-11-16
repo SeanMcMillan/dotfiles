@@ -1,7 +1,56 @@
 {
+  "cleanupPeriodDays": 365,
   "permissions": {
-    "defaultMode": "acceptEdits"
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(ls)",
+      "Bash(ls *)",
+      "Bash(pwd -P)",
+      "Bash(grep *)",
+      "Bash(wc)",
+      "Bash(wc *)",
+      "Bash(git fetch *)",
+      "Bash(git diff *)",
+      "Bash(git show *)",
+      "Bash(git log *)",
+      "Bash(git rev-list *)",
+      "Bash(git ls-remote *)",
+      "Bash(git for-each-ref *)",
+      "Bash(git grep *)",
+      "Bash(git ls-tree *)",
+      "Bash(git check-ignore *)",
+      "Bash(git merge-tree *)",
+      "Bash(gh pr view *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr checks *)",
+      "Bash(gh pr status *)",
+      "Bash(gh run list *)",
+      "Bash(gh run view *)",
+      "Bash(gh auth status)",
+      "Bash(npm view *)",
+      "Bash(npm outdated)",
+      "Bash(npm outdated *)",
+      "Bash(npm ls *)",
+      "Bash(gcloud auth list)",
+      "Skill(fewer-permission-prompts)",
+      "mcp__claude_ai_Atlassian_MCP__getAccessibleAtlassianResources",
+      "mcp__claude_ai_Atlassian_MCP__atlassianUserInfo",
+      "mcp__claude_ai_Atlassian_MCP__getJiraIssue",
+      "mcp__claude_ai_Atlassian_MCP__listJiraIssueComments",
+      "mcp__claude_ai_Atlassian_MCP__searchJiraIssuesUsingJql",
+      "mcp__claude_ai_Atlassian_MCP__getConfluenceContent",
+      "mcp__claude_ai_Atlassian_MCP__discover",
+      "mcp__claude_ai_Atlassian_MCP__executeRead",
+      "mcp__claude_ai_Figma__create_session",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__get_variable_defs",
+      "mcp__claude_ai_Figma__get_figma_skill",
+      "mcp__claude_ai_Figma__get_design_context",
+      "mcp__claude_ai_Claude_Docs__read"
+    ]
   },
+  "model": "opus",
   "hooks": {
     "PreToolUse": [
       {
@@ -24,7 +73,6 @@
       }
     ]
   },
-  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "bash ~/.claude/statusline-command.sh"
@@ -32,6 +80,7 @@
   "enabledPlugins": {
     "clangd-lsp@claude-plugins-official": true
   },
+  "outputStyle": "Concise",
   "modelSettings": {
     "claude-opus-5-5": {
       "effortLevel": "high"
@@ -45,8 +94,9 @@
     }
   },
   "tui": "default",
+  "prefersReducedMotion": true,
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
   "autoCompactEnabled": false,
-  "cleanupPeriodDays": 365
+  "spinnerTipsEnabled": false
 }
